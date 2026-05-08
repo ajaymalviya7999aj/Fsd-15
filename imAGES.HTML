@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: relative; /* reference box */
+      }
+
+      /* sabhi images ko centre me rakho */
+      .container img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* centre align */
+      }
+
+      .img1 {
+        z-index: 1;
+        width: 150px;
+        height: 100px;
+      }
+      .img2 {
+        z-index: 2;
+        width: 150px;
+        height: 100px;
+      }
+      .img3 {
+        z-index: 3;
+        width: 150px;
+        height: 100px;
+      }
+      .img4 {
+        z-index: 4;
+        width: 200px;
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        class="img1"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScD_Uo3n1OusGmgkLrrBMmkKqXA6gmjkuB6Q&s"
+      />
+      <img
+        class="img2"
+        src="https://www.shutterstock.com/image-photo/serenity-summer-day-durmitor-national-600nw-2623341111.jpg"
+      />
+      <img
+        class="img3"
+        src="https://i.pinimg.com/originals/9c/b0/70/9cb070d62dc738a0c3a1a408d68e4af5.jpg"
+      />
+      <img
+        class="img4"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhII9ud_FgzMMlnWwk3-0sB_lEM6aUgipcBg&s"
+      />
+    </div>
+  </body>
+</html>

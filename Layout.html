@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      body {
+        height: 100vh;
+      }
+      .header {
+        background-color: black;
+        color: white;
+        padding: 20px;
+        height: 20px;
+      }
+      .main {
+        min-height: calc(100vh -117px);
+        display: flex;
+      }
+      .foter {
+        background-color: black;
+        color: white;
+        padding: 20px;
+        height: 20px;
+      }
+      .sidebar {
+        background-color: antiquewhite;
+        width: 18%;
+      }
+      .content {
+        background-color: azure;
+        width: 70%;
+        display: flex;
+      }
+      .ads {
+        background-color: bisque;
+        width: 12%;
+      }
+      .item {
+        background-color: aqua;
+        margin: 5px;
+        padding: 13.5px;
+        display: flex;
+        justify-content: center;
+      }
+      .item:hover {
+        background-color: aquamarine;
+      }
+      .item2 {
+        background-color: blueviolet;
+        height: 100px;
+        width: 100px;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">Header</div>
+    <div class="main">
+      <div class="sidebar">
+        <div class="item">HTML</div>
+        <div class="item">CSS</div>
+        <div class="item">JS</div>
+        <div class="item">NODEJS</div>
+        <div class="item">REACT</div>
+        <div class="item">EXPRESS</div>
+        <div class="item">MONGODB</div>
+        <div class="item">NEXTJS</div>
+        <div class="item">NUXTJS</div>
+        <div class="item">NESTJS</div>
+      </div>
+      <div class="content">
+        <div class="item2">Html</div>
+        <div class="item2">Css</div>
+        <div class="item2">JavaScript</div>
+        <div class="item2">React</div>
+        <div class="item2">Mongodb</div>
+        <div class="item2">Express</div>
+      </div>
+      <div class="ads">ads</div>
+    </div>
+    <div class="foter">foter</div>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Story UI</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .story-wrapper {
+        width: 300px;
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      /* Stories Slide */
+      .stories {
+        display: flex;
+        width: 300%;
+        height: 100%;
+        transition: transform 0.5s ease;
+      }
+
+      .story {
+        width: 100%;
+        height: 100%;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: white;
+      }
+
+      .story:nth-child(1) {
+        background: red;
+      }
+      .story:nth-child(2) {
+        background: blue;
+      }
+      .story:nth-child(3) {
+        background: green;
+      }
+
+      /* Progress Bar */
+      .progress-container {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        display: flex;
+        gap: 5px;
+      }
+
+      .progress {
+        flex: 1;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.3);
+        overflow: hidden;
+        border-radius: 5px;
+      }
+
+      .progress::after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 0%;
+        background: white;
+      }
+
+      /* Active Animation */
+      .progress.active::after {
+        animation: fill 3s linear forwards;
+      }
+
+      @keyframes fill {
+        to {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="story-wrapper">
+      <!-- Progress Bars -->
+      <div class="progress-container">
+        <div class="progress active"></div>
+        <div class="progress"></div>
+        <div class="progress"></div>
+      </div>
+
+      <!-- Stories -->
+      <div class="stories">
+        <div class="story">Story 1</div>
+        <div class="story">Story 2</div>
+        <div class="story">Story 3</div>
+      </div>
+    </div>
+
+    <script>
+      let index = 0;
+      const stories = document.querySelector(".stories");
+      const bars = document.querySelectorAll(".progress");
+
+      function showStory(i) {
+        stories.style.transform = `translateX(-${i * 100}%)`;
+
+        bars.forEach((bar) => bar.classList.remove("active"));
+        bars[i].classList.add("active");
+      }
+
+      function nextStory() {
+        index++;
+        if (index >= bars.length) index = 0;
+        showStory(index);
+      }
+
+      showStory(index);
+      setInterval(nextStory, 3000);
+    </script>
+  </body>
+</html>

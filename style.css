@@ -1,0 +1,34 @@
+ * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      body {
+        height: 100vh;
+      }
+      .navbar {
+        background-color: #ffff;
+        color: #0c010a86;
+        height: 20px
+      }
+      .main {
+        min-height: calc(100vh -300px);
+        display: flex;
+      }
+      .footer {
+        
+        background-color: #cc1717;
+        padding: 15px;
+        height: 60px
+      
+      
+      }
+      .item3{
+          display: block;        /* har anchor ek ke niche ek */
+      margin: 5px 0;
+      text-decoration: none;
+      color: blue;
+         
+      }
+      
